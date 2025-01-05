@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}Welcome to My Website{% endblock %}
+
+{% block content %}
+<div class="home">
+    <h1>Home Page</h1>
+    <p>Welcome to the homepage of My Website!</p>
+    <button>Click Me</button>
+</div>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}

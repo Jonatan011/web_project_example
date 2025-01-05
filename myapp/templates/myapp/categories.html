@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="about">
+  <h1>Categories</h1>
+  <p>Hola {{ name }}</p>
+  <ul>
+    {# Realizado for de categories #} 
+    {% comment %} 
+    Este es un comentario
+    multilinea 
+    {% endcomment %} 
+    {% for category in categories %} 
+    {% if category == "code" %}
+    <li><b>{{ category|upper }}</b></li>  
+    {% else %}
+    <li>{{ category }}</li>
+    {% endif %} {% endfor %}
+  </ul>
+  <h5>Total de categorías: {{ categories|length }}</h5>
+</div>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
